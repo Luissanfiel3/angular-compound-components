@@ -1,0 +1,12 @@
+
+<div  class="country-container">
+<h3>Countries</h3>
+
+<select>
+  <option *ngFor="let country of countries$ | async" [value]="country.code">
+    ​ {{ country.name }}
+  </option>
+</select>
+<ng-content>
+</ng-content>
+</div>
