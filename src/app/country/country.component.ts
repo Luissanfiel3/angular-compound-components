@@ -1,4 +1,5 @@
 import { Component, OnInit, ContentChild } from '@angular/core';
+import { Subject } from 'rxjs';
 import { CountrySelectComponent } from './country-select/country-select.component';
 import { CountryflagComponent } from './countryflag/countryflag.component';
 import { CountryService } from './services/country.service';
@@ -10,10 +11,7 @@ import { CountryService } from './services/country.service';
 })
 export class CountryComponent implements OnInit {
   countries$ = this.countryService.getCountries();
-
-  @ContentChild(CountrySelectComponent)
-  countrySelected!: CountrySelectComponent;
-  @ContentChild(CountryflagComponent) countryFlag!: CountryflagComponent;
+  selected$: Subject<string> = new Subject<string>();
 
   constructor(private countryService: CountryService) {}
 
@@ -21,8 +19,7 @@ export class CountryComponent implements OnInit {
     console.log('Holaaa', this.countries$);
   }
 
-  selectedCountry(select: HTMLSelectElement): void {
-    this.countrySelected.selected = select.value;
-    this.countryFlag.countrySelected = select.value;
+  changed(value: any) {
+    this.selected$.next(value);
   }
 }

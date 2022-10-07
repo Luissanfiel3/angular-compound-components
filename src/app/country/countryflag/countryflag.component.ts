@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CountryComponent } from '../country.component';
 
 @Component({
   selector: 'app-country-flag',
@@ -6,5 +7,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./countryflag.component.css'],
 })
 export class CountryflagComponent {
-  @Input() countrySelected!: string;
+  constructor(public country: CountryComponent) {}
 }

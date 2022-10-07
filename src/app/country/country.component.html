@@ -1,12 +1,12 @@
 
 <div  class="country-container">
-<h3>Countries</h3>
-
-<select #country (change)="selectedCountry(country.value)">
+<h2>Select Countries</h2>
+<select #countrySelect (change)="changed(countrySelect.value)">
   <option *ngFor="let country of countries$ | async" [value]="country.code">
-    ​ {{ country.name }}
+    {{ country.name }}
   </option>
 </select>
 <ng-content>
+
 </ng-content>
 </div>

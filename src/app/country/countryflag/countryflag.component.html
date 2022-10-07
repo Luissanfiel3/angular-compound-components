@@ -1,3 +1,3 @@
-<div *ngIf="countrySelected">
-  ​ <img src="https://countryflagsapi.com/png/{{ countrySelected }}" />
+<div *ngIf="country.selected$ | async as countryName">
+  <img src="https://countryflagsapi.com/png/{{ countryName }}" />
 </div>
