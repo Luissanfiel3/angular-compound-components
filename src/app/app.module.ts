@@ -6,10 +6,16 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CountryComponent } from './country/country.component';
+import { CountryflagComponent } from './country/countryflag/countryflag.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, CommonModule ],
-  declarations: [AppComponent, HelloComponent, CountryComponent],
+  imports: [BrowserModule, FormsModule, CommonModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    CountryComponent,
+    CountryflagComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
