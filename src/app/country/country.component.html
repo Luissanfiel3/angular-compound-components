@@ -2,7 +2,7 @@
 <div  class="country-container">
 <h3>Countries</h3>
 
-<select>
+<select #country (change)="selectedCountry(country.value)">
   <option *ngFor="let country of countries$ | async" [value]="country.code">
     ​ {{ country.name }}
   </option>
