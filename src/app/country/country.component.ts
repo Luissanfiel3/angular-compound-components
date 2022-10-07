@@ -22,7 +22,7 @@ export class CountryComponent implements OnInit {
   }
 
 selectedCountry(select:HTMLSelectElement):void {
-  this.countrySelected.selected = select.value;
-  this.countryFlag.countrySelected = select.value;
+  this.countrySelected.countrySelected = select.value;
+  this.countryFlag.selected = select.value;
  }
 }

@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CountrySelectComponent implements OnInit {
 
-  @Input() selected!: string;
+  @Input() countrySelected!: string;
 
   constructor() { }
 

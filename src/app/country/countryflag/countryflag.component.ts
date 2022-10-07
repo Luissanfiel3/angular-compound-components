@@ -6,5 +6,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./countryflag.component.css'],
 })
 export class CountryflagComponent {
-  @Input() countrySelected!: string;
+  @Input() selected!: string;
 }
