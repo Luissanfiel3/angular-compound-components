@@ -16,7 +16,7 @@ export class CountryComponent implements OnInit {
   constructor(private countryService: CountryService) {}
 
   ngOnInit() {
-    console.log('Holaaa', this.countries$);
+  
   }
 
   changed(value: any) {
