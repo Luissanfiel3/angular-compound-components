@@ -21,8 +21,8 @@ export class CountryComponent implements OnInit {
     console.log('Holaaa', this.countries$);
   }
 
-selectedCountry(select:HTMLSelectElement):void {
-  this.countrySelected.countrySelected = select.value;
-  this.countryFlag.selected = select.value;
- }
+  selectedCountry(select: HTMLSelectElement): void {
+    this.countrySelected.selected = select.value;
+    this.countryFlag.countrySelected = select.value;
+  }
 }

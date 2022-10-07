@@ -1,19 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-country-select',
+  selector: 'app-country-selected',
   templateUrl: './country-select.component.html',
-  styleUrls: ['./country-select.component.css']
+  styleUrls: ['./country-select.component.css'],
 })
 export class CountrySelectComponent implements OnInit {
+  @Input() selected!: string;
 
-  @Input() countrySelected!: string;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  
-
+  ngOnInit() {}
 }
